@@ -16,7 +16,7 @@ function generatePassword() {
   let potentialChars = [];
 
   passwordLength = prompt("How long would you like your password to be? Between 8-128 characters.");
-    if (passwordLength < 8 || passwordLength > 129) {
+    if (passwordLength < 8 || passwordLength > 128) {
       prompt("Password must be between 8 and 128 characters long. Try again.");
   } 
 
@@ -41,7 +41,7 @@ function generatePassword() {
   } else alert("Your password will not include numbers.");
 
   if (passwordLowercase === false && passwordUppercase === false && passwordSpecialChar === false && passwordNumbers === false) {
-    alert("You must include at least one character type.");
+    alert("You must include at least one character type. Try again.");
   }
 
   // Groups together all possible selected character types
