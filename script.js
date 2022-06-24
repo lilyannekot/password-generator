@@ -59,9 +59,9 @@ if (passwordNumbers) {
 // Generates potential final password
 let finalPassword = ""
 for (let i = 0; i < passwordLength; i++) {
-  let rng =[Math.floor(Math.random() * potentialChars.length)];
+  let random =[Math.floor(Math.random() * potentialChars.length)];
 
-  finalPassword = finalPassword + potentialChars[rng];
+  finalPassword = finalPassword + potentialChars[random];
 }
 return finalPassword;
 };
