@@ -2,34 +2,33 @@
 var generateBtn = document.querySelector("#generate");
 
 // Arrays for all possible character types
-var abcLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var abcUpper = ["A", "B", "C", "D", "E", "F", "'G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var specialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "~"];
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const abcLower = ["bcdefghijklmnopqrstuvwxyz"];
+const abcUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+const specialChar = ["!@#$%^&*~"];
+const numbers = ["0123456789"];
 
-// Function to prompt users on what they'd like to include in their password
-function askQuestions() {
+// var askAbcLower = confirm("Would you like your password to include lower case letters?");
+//var askAbcUpper = confirm("Would you like your password to include upper case letters?");
+//var askspecialChar = confirm("Would you like your password to include special characters?");
+//var askNumbers = confirm("Would you like your password to include numbers?");
 
-  var passwordLength = prompt("How long would you like your password to be?")
+// Function to ask user about password length
+function promptMe() {
+  var passwordLength = prompt("How long would you like your password to be? Between 8-128 characters.");
   if (passwordLength < 8 || passwordLength > 129) {
-      alert("Password must be between 8 and 128 characters long.")
-  }
-  
-// The confirm() method returns true if the user clicked "OK", otherwise false.
+    alert("Password must be between 8 and 128 characters long.");
 
-  var askAbcLower = confirm("Would you like your password to include lower case letters?");
-
-  var askAbcUpper = confirm("Would you like your password to include upper case letters?");
-  
-  var askspecialChar = confirm("Would you like your password to include special characters?");
-
-  var askNumbers = confirm("Would you like your password to include numbers?");
-
+  } else if (askAbcLower) = confirm("Do you want to include lowercase letters in your password?");
 }
+  // } else if askAbcUpper =  confirm("Do you want to include uppercase letters in your password?"); {
+
+  // } else if askSpecialChar = confirm("Do you want to include special characters in your password?")
+
+// The confirm() method returns true if the user clicked "OK", otherwise false.
 
 // Function combines all user responses and produces desired password
 function generatePassword() {
-
+  
 }
 
 // Write password to the #password input
@@ -42,4 +41,8 @@ function writePassword() {
 
 // Add event listener to generate button
 
-document.querySelector("#generate").addEventListener("click", generatePassword);
+// document.querySelector("#generate").addEventListener("click", generatePassword);
+
+generateBtn.addEventListener("click", writePassword);
+console.log(generateBtn);
+  
