@@ -8,6 +8,7 @@ const abcLower = ["bcdefghijklmnopqrstuvwxyz"];
 const abcUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 const specialChar = ["!@#$%^&*~"];
 const numbers = ["0123456789"];
+let potentialChars = [];
 
 passwordLength = prompt("How long would you like your password to be? Between 8-128 characters.");
   if (passwordLength < 8 || passwordLength > 129) {
@@ -38,10 +39,32 @@ if (passwordLowercase === false && passwordUppercase === false && passwordSpecia
   return "Please include at least one character type.";
 }
 
-// Function combines all user responses and produces desired password
-function generatePassword() {
-  
+// Groups together all possible selected character typea
+if (passwordLowercase) {
+  potentialChars = potentialChars.concat(abcLower);
 }
+
+if (passwordUppercase) {
+  potentialChars = potentialChars.concat(abcUpper);
+}
+
+if (passwordSpecialChar) {
+  potentialChars = potentialChars.concat(specialChar);
+}
+
+if (passwordNumbers) {
+  potentialCharss = potentialChars.concat(numbers);
+}
+
+// Generates potential final password
+let finalPassword = ""
+for (let i = 0; i < passwordLength; i++) {
+  let rng =[Math.floor(Math.random() * potentialChars.length)];
+
+  finalPassword = finalPassword + potentialChars[rng];
+}
+return finalPassword;
+};
 
 // Write password to the #password input
 function writePassword() {
@@ -52,9 +75,6 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-
-// document.querySelector("#generate").addEventListener("click", generatePassword);
-
 generateBtn.addEventListener("click", writePassword);
 console.log(generateBtn);
   
