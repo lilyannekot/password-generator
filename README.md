@@ -14,8 +14,8 @@ The following project entailed created a password generator that upon clicking t
 
 ## Project Screenshot
 
-![Project Screenshot 1]((Assets/Project\ Screenshot.png))
-![Project Screenshot 2]((Assets/Screen\ Shot\ 2022-06-24\ at\ 4.42.06\ PM.png))
+![Project Screenshot 1](Assets/Project-Screenshot.png)
+![Project Screenshot 2](Assets/project-screenshot1.png)
 
 ## Author Links
 
