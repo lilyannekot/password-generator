@@ -61,10 +61,6 @@ function generatePassword() {
     potentialChars = potentialChars.concat(numbers);
    }
 
-  for (let i =0; i < 10; i++) {
-    console.log(i);
-  }
-
   // Generates potential final password
   let finalPassword = ""
   for (let i = 0; i < passwordLength; i++) {
