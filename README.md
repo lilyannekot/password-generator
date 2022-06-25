@@ -19,6 +19,6 @@ The following project entailed created a password generator that upon clicking t
 
 ## Author Links
 
-* [GitHub] (https://github.com/lilyannekot)
-* [Project Website] (https://lilyannekot.github.io/password-generator/)
-* [LinkedIn] (https://www.linkedin.com/in/lilykot/)
+* [GitHub](https://github.com/lilyannekot)
+* [Project Website](https://lilyannekot.github.io/password-generator/)
+* [LinkedIn](https://www.linkedin.com/in/lilykot/)

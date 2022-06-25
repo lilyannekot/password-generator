@@ -9,10 +9,10 @@ console.log(generateBtn);
 function generatePassword() {
 
   // Arrays for all possible character types
-  const abcLower = ["bcdefghijklmnopqrstuvwxyz"];
-  const abcUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-  const specialChar = ["!@#$%^&*~"];
-  const numbers = ["0123456789"];
+  const abcLower = "abcdefghijklmnopqrstuvwxyz".split("");
+  const abcUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  const specialChar = "!@#$%^&*~".split("");
+  const numbers = "0123456789".split("");
   let potentialChars = [];
 
   passwordLength = prompt("How long would you like your password to be? Between 8-128 characters.");
@@ -58,8 +58,12 @@ function generatePassword() {
   }
 
   if (passwordNumbers) {
-    potentialCharss = potentialChars.concat(numbers);
+    potentialChars = potentialChars.concat(numbers);
    }
+
+  for (let i =0; i < 10; i++) {
+    console.log(i);
+  }
 
   // Generates potential final password
   let finalPassword = ""
@@ -67,6 +71,7 @@ function generatePassword() {
     let random =[Math.floor(Math.random() * potentialChars.length)];
 
     finalPassword = finalPassword + potentialChars[random];
+    console.log(finalPassword);
   }
   return finalPassword;
   };
